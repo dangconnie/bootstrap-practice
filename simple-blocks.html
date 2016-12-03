@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css" media="screen">
+		div{
+			background-color: #444;
+			margin:  2px;
+			color: white;
+			font-size: 72px;
+		}
+
+		#block1{
+			width: 60%;
+			height: 200px;
+			float: left;
+		}
+
+		#block2{
+			width: 35%;
+			height: 600px;
+			float: right;
+		}
+
+		#block3{
+			width: 60%;
+			height: 400px;
+			float: left;
+		}
+
+		/* This only applies when the max-width is 900px and only applies to block2; */
+		@media screen and (max-width: 900px){
+			/* #block2{
+				width: 100%; */
+			/*#block1, #block2, #block3{
+				width: 90%;
+				float: none;
+				margin: auto;
+			/* when screen is less than 900px, float is gone and margin is auto. If you had targeted a div instead of each block, it is being overwritten by the ID rule. ID is more specific than tag so it takes precedence. Refer to above. */
+			div{
+				width: 90% !important;
+				float: none !important;
+				margin: auto !important;
+			/* Think of !important as sudo for HTML. Try to avoid this!!!! If you set up CSS correctly, this shouldn't be needed. */
+			}
+		}
+
+		@media screen and (max-width: 500px){
+			#block2{
+				display: none;
+			}
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<div id="block1">Block 1</div>
+	<div id="block2">Block 2</div>
+	<div id="block3">Block 3</div>
+	
+
+</body>
+</html>
